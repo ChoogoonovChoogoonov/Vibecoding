@@ -12,24 +12,10 @@
      #scoreDisplay { font-size: 32px; color: #0f8; text-shadow: 0 0 10px #0f8; position: absolute; left: 50%; transform: translateX(-50%); width: 120px; text-align: center; }
      #timerDisplay { font-size: 20px; color: #ff0; text-shadow: 0 0 10px #ff0; text-align: right; width: 90px; }
      
-     /* --- СТИЛИЗОВАННОЕ TELEGRAM МЕНЮ --- */
-     #menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #0e1621; display: flex; flex-direction: column; z-index: 10; font-family: Arial, sans-serif; }
-     .tg-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #17212b; color: white; font-size: 20px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.3); z-index: 2; }
-     .tg-content { flex-grow: 1; overflow-y: auto; padding-bottom: 80px; position: relative; }
-     .tg-chat-list { display: flex; flex-direction: column; }
-     .tg-chat-item { display: flex; align-items: center; padding: 10px 15px; cursor: pointer; transition: background 0.2s; }
-     .tg-chat-item:hover, .tg-chat-item:active { background: #1c2a38; }
-     .tg-avatar { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover; background: #242f3d; display: flex; justify-content: center; align-items: center; font-size: 24px; color: white; flex-shrink: 0; }
-     .tg-chat-content { flex-grow: 1; border-bottom: 1px solid #131c25; padding-bottom: 10px; display: flex; flex-direction: column; justify-content: center; min-height: 40px; }
-     .tg-chat-row { display: flex; justify-content: space-between; align-items: baseline; }
-     .tg-chat-name { color: #fff; font-size: 16px; font-weight: bold; margin-bottom: 3px; }
-     .tg-chat-time { color: #7f91a4; font-size: 12px; }
-     .tg-chat-msg { color: #7f91a4; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px; }
-     .tg-fab { position: absolute; bottom: 20px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #5288c1; color: white; display: flex; justify-content: center; align-items: center; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; border: none; z-index: 20; padding: 0; font-family: Arial; text-align: center; line-height: 56px; }
-     .tg-fab:hover { filter: brightness(1.1); }
+     /* --- СТИЛИЗОВАННОЕ TELEGRAM МЕНЮ (ОБНОВЛЕННОЕ ПОД ЗАДНИК) --- */
+     #menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%97%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA.webp') center/cover no-repeat; display: flex; flex-direction: column; z-index: 10; font-family: Arial, sans-serif; }
      
-     /* ИСПРАВЛЕНИЕ 7: Крупное и красивое приветствие */
-     #welcome-text { font-size: 20px; color: #fff; background: #17212b; padding: 12px 25px; margin-bottom: 10px; font-family: 'Bungee', cursive; text-transform: uppercase; text-shadow: 0 0 10px #5288c1; letter-spacing: 2px; text-align: center; border-bottom: 1px solid #131c25; }
+     #welcome-text { font-size: 20px; color: #fff; background: transparent; padding: 12px 25px; margin-top: 30px; font-family: 'Bungee', cursive; text-transform: uppercase; text-shadow: 0 0 10px #000; letter-spacing: 2px; text-align: center; border: none; z-index: 10; }
      
      #char-select { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #0e1621; display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 15; }
      
@@ -38,7 +24,6 @@
      .char-card:hover { transform: scale(1.05); filter: brightness(1.2); }
      .char-card:active { transform: scale(0.95); }
      
-     /* ИСПРАВЛЕНИЕ 4: Возврат оригинальных неоновых цветов */
      .char-card.solyan { border-color: #0f8; box-shadow: 0 0 15px rgba(0, 255, 136, 0.4); }
      .char-card.caramel { border-color: #f0f; box-shadow: 0 0 15px rgba(255, 0, 255, 0.4); }
      .char-card.tsyga { border-color: #fb0; box-shadow: 0 0 15px rgba(255, 187, 0, 0.4); }
@@ -60,17 +45,16 @@
      .tsyga .bar-fill { background: #fb0; box-shadow: 0 0 5px #fb0;}
      .char-desc { font-size: 11px; color: #aaa; font-family: Arial, sans-serif; line-height: 1.2; margin-top: 8px; }
      
-     #death-text { color: #f55; font-size: 32px; font-weight: 900; text-align: center; display: none; line-height: 1.1; margin-top: 15px; margin-bottom: 5px; word-wrap: break-word; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Bungee'; }
-     #final-score { font-size: 20px; color: #64b5f6; margin-bottom: 15px; display: none; font-family: Arial, sans-serif; font-weight: bold; text-align: center; border-bottom: 1px solid #131c25; padding-bottom: 15px;}
+     #death-text { color: #f55; font-size: 32px; font-weight: 900; text-align: center; display: none; line-height: 1.1; margin-top: 15px; margin-bottom: 5px; word-wrap: break-word; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Bungee'; z-index: 10; }
+     #final-score { font-size: 20px; color: #64b5f6; margin-bottom: 15px; display: none; font-family: Arial, sans-serif; font-weight: bold; text-align: center; border-bottom: 1px solid #131c25; padding-bottom: 15px; z-index: 10; }
      
-     /* ИСПРАВЛЕНИЕ 5: Лидерборд */
      #leaderboard-list { font-family: Arial, sans-serif; font-size: 14px; color: #fff; margin-top: 5px; text-align: left; background: #17212b; padding: 10px; border-radius: 15px; display: none; max-height: 250px; overflow-y: auto; border: 1px solid #242f3d; pointer-events: auto; touch-action: pan-y; -webkit-overflow-scrolling: touch; box-shadow: inset 0 2px 10px rgba(0,0,0,0.3); }
      #leaderboard-list::-webkit-scrollbar { width: 5px; }
      #leaderboard-list::-webkit-scrollbar-thumb { background: #5288c1; border-radius: 5px; }
      
-     #menu-title { font-size: 36px; margin: 15px 0 5px 0; color: #fff; text-align: center; letter-spacing: 2px; line-height: 1.1; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Bungee';}
+     #menu-title { font-size: 36px; margin: 15px 0 5px 0; color: #fff; text-align: center; letter-spacing: 2px; line-height: 1.1; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-family: 'Bungee'; display:none;}
      #menu-title span { color: #5288c1; }
-     #menu-ver { color: #7f91a4; font-size: 11px; margin-top: 0; margin-bottom: 20px; line-height: 1.3; text-align: center; font-family: Arial, sans-serif; letter-spacing: 1px; }
+     #menu-ver { color: #7f91a4; font-size: 11px; margin-top: 0; margin-bottom: 20px; line-height: 1.3; text-align: center; font-family: Arial, sans-serif; letter-spacing: 1px; display:none;}
 
      button { padding: 15px 10px; font-size: 18px; font-family: 'Bungee'; border-radius: 12px; cursor: pointer; color: #fff !important; transition: all 0.1s ease; max-width: 90%; text-align: center; box-sizing: border-box; text-transform: uppercase; background: linear-gradient(180deg, #2b5278, #1c3654); box-shadow: 0 4px 6px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); border: 1px solid #14273d; border-bottom: 4px solid #0f1d2e; }
      button:hover { filter: brightness(1.15); }
@@ -92,6 +76,12 @@
      #deathVideo, #startVideo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000; display: none; z-index: 20; }
      #startVideo { display: block; z-index: 30; }
      @keyframes blink { 50% { opacity: 0; } }
+
+     /* Анимация точек как в Телеге */
+     .typing-dots span { animation: tg-blink 1.4s infinite both; }
+     .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+     .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+     @keyframes tg-blink { 0% { opacity: 0.2; } 20% { opacity: 1; } 100% { opacity: 0.2; } }
 
      /* --- ЧАТ С СОЛЯНОМ (TG STYLE) --- */
      #solyan-chat { display: none; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; height: 100dvh; background: #0e1621; z-index: 999; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 25px rgba(0,0,0,0.7); }
@@ -130,91 +120,35 @@
      </div> 
 
      <div id="menu"> 
-         <div class="tg-header">
-             <div style="display:flex; align-items:center; gap:10px;">
-                 <img src="https://github.com/ChoogoonovChoogoonov/Vibecoding/blob/3e5654904f0d30110c6985796e709af52cecd8ba/%D0%A1%D0%BE%D0%BB%D1%8F%D0%BD.webp?raw=true" style="width:34px; height:34px; border-radius:50%; object-fit:cover; background:#242f3d;">
-                 Telegram
-             </div>
-             <div>🔍 ⋮</div>
+         <div id="welcome-text">🔥 Шалом, Аноним! 🔥</div>
+         <div id="death-text">ТЕБЯ<br>ОТПЕТУШИЛИ</div> 
+         <div id="final-score">ТВОЙ СЧЕТ: 0</div> 
+
+         <h1 id="menu-title">СОЛЕВОЙ<br><span>ПРЫГУНОК</span></h1> 
+         <p id="menu-ver">v0.5.7</p> 
+         <button id="start-btn" style="display:none;" disabled></button>
+         <div id="start-btn-text" style="display:none;"></div>
+         <label class="toggle-label" style="display: none;"> <input type="checkbox" id="god-mode-toggle" class="hidden-toggle" onchange="isGodMode = this.checked; playClick();"> <div class="toggle-switch"></div> (ТЕСТ) </label> 
+         <label class="toggle-label" style="display:none;"> <input type="checkbox" id="radio-mode-toggle" class="hidden-toggle" onchange="toggleRadio(this.checked)"> <div class="toggle-switch"></div></label> 
+
+         <div style="flex-grow: 1;"></div>
+
+         <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; align-items: center; margin-bottom: 50px; z-index: 10;">
+             <img id="start-btn-img" src="https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%20%D0%94%D0%B0%D1%82%D1%8C%20%D0%9F%D1%83%D0%BB%D1%8E.webp" style="width: 85%; cursor: pointer; opacity: 0.5;" onclick="if(!document.getElementById('start-btn').disabled) { playClick(); handleStart(); }">
+             
+             <img id="chat-btn-img" src="https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%20%D0%A1%D0%BF%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C.webp" style="width: 85%; cursor: pointer;" onclick="playClick(); openChat()">
+             
+             <img id="custom-radio-btn" src="https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%20%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%201.webp" style="width: 50%; cursor: pointer;" onclick="toggleCustomRadio()">
          </div>
-         
-         <div class="tg-content">
-             <div id="welcome-text">🔥 Шалом, Аноним! 🔥</div>
-             <div id="death-text">ТЕБЯ<br>ОТПЕТУШИЛИ</div> 
-             <div id="final-score">ТВОЙ СЧЕТ: 0</div> 
-             <h1 id="menu-title">СОЛЕВОЙ<br><span>ПРЫГУНОК</span></h1> 
-             <p id="menu-ver">v0.5.7<br>Neuro-Solyan Edition</p> 
 
-             <div class="tg-chat-list">
-                 <div class="tg-chat-item" onclick="if(!document.getElementById('start-btn').disabled) { playClick(); handleStart(); }">
-                     <button id="start-btn" style="display:none;" disabled></button>
-                     <img class="tg-avatar" src="https://github.com/ChoogoonovChoogoonov/Vibecoding/blob/3e5654904f0d30110c6985796e709af52cecd8ba/%D0%A1%D0%BE%D0%BB%D1%8F%D0%BD.webp?raw=true">
-                     <div class="tg-chat-content">
-                         <div class="tg-chat-row">
-                             <span class="tg-chat-name">Играть</span>
-                             <span class="tg-chat-time" style="color:#5288c1">✓✓</span>
-                         </div>
-                         <div class="tg-chat-msg" id="start-btn-text" style="color:#5288c1; font-weight:bold;">ЗАГРУЗКА...</div>
-                     </div>
-                 </div>
+         <button id="change-char-btn" style="display:none; width: 85%; margin: 0 auto 10px; z-index: 10;" onclick="playClick(); openCharSelect()">Сменить бойца</button>
+         <button id="leader-btn" style="display:none; width: 85%; margin: 0 auto 10px; z-index: 10; background: linear-gradient(180deg, #f2a65a, #d18238);" onclick="playClick(); showLeaderboard()">Лидерборд</button>
+         <button id="feedback-btn" class="tg-fab" onclick="playClick(); openFeedback()" style="display:none; z-index:10;">✏️</button> 
 
-                 <div id="chat-btn" class="tg-chat-item" onclick="playClick(); openChat()">
-                     <img class="tg-avatar" src="https://github.com/ChoogoonovChoogoonov/Vibecoding/blob/3e5654904f0d30110c6985796e709af52cecd8ba/%D0%A1%D0%BE%D0%BB%D1%8F%D0%BD.webp?raw=true">
-                     <div class="tg-chat-content">
-                         <div class="tg-chat-row">
-                             <span class="tg-chat-name">Солян</span>
-                             <span class="tg-chat-time">16:24</span>
-                         </div>
-                         <div class="tg-chat-msg">Спроси у Соляна...</div>
-                     </div>
-                 </div>
-
-                 <div id="change-char-btn" class="tg-chat-item" style="display:none;" onclick="playClick(); openCharSelect()">
-                     <div class="tg-avatar" style="background:#e85b5b; font-size:24px;">👤</div>
-                     <div class="tg-chat-content">
-                         <div class="tg-chat-row">
-                             <span class="tg-chat-name">Сменить бойца</span>
-                             <span class="tg-chat-time">15:58</span>
-                         </div>
-                         <div class="tg-chat-msg">Выбери своего петуха</div>
-                     </div>
-                 </div>
-
-                 <div id="leader-btn" class="tg-chat-item" style="display:none;" onclick="playClick(); showLeaderboard()">
-                     <div class="tg-avatar" style="background:#f2a65a; font-size:24px;">🏆</div>
-                     <div class="tg-chat-content">
-                         <div class="tg-chat-row">
-                             <span class="tg-chat-name">Лидерборд</span>
-                             <span class="tg-chat-time">13:48</span>
-                         </div>
-                         <div class="tg-chat-msg">Топ 30 прыгунов</div>
-                     </div>
-                 </div>
-
-                 <div class="tg-chat-item">
-                     <div class="tg-avatar" style="background:#5288c1; font-size:24px;">🎧</div>
-                     <div class="tg-chat-content" style="border-bottom:none;">
-                         <div class="tg-chat-row">
-                             <span class="tg-chat-name">Record Lo-Fi</span>
-                             <label class="toggle-label" style="margin:0;">
-                                 <input type="checkbox" id="radio-mode-toggle" class="hidden-toggle" onchange="toggleRadio(this.checked)">
-                                 <div class="toggle-switch"></div>
-                             </label>
-                         </div>
-                         <div class="tg-chat-msg">Вкл/Выкл радио</div>
-                     </div>
-                 </div>
-             </div>
-
-             <label class="toggle-label" style="display: none;"> <input type="checkbox" id="god-mode-toggle" class="hidden-toggle" onchange="isGodMode = this.checked; playClick();"> <div class="toggle-switch"></div> (ТЕСТ) </label> 
-
-             <div style="padding: 0 15px;">
-                 <h2 id="leaderboard-title" style="display:none; color:#5288c1; font-family:'Bungee'; font-size:18px; margin-top:15px; margin-bottom:5px;">ТОП 30 ПРЫГУНОВ</h2>
-                 <div id="leaderboard-list">Грузим топ...</div> 
-             </div>
+         <div style="padding: 0 15px; width: 100%; box-sizing: border-box; z-index:10;">
+             <h2 id="leaderboard-title" style="display:none; color:#5288c1; font-family:'Bungee'; font-size:18px; margin-top:15px; margin-bottom:5px; text-shadow: 0 0 5px #000;">ТОП 30 ПРЫГУНОВ</h2>
+             <div id="leaderboard-list">Грузим топ...</div> 
          </div>
-         
-         <button id="feedback-btn" class="tg-fab" onclick="playClick(); openFeedback()" style="display:none;">✏️</button> 
      </div> 
 
      <div id="feedback-modal"> 
@@ -231,7 +165,7 @@
      <div id="chat-header">
          <button id="chat-exit-btn" onclick="playClick(); closeChat()">🡠</button>
          <div class="chat-profile">
-             <img class="chat-avatar" src="https://github.com/ChoogoonovChoogoonov/Vibecoding/blob/3e5654904f0d30110c6985796e709af52cecd8ba/%D0%A1%D0%BE%D0%BB%D1%8F%D0%BD.webp?raw=true">
+             <img class="chat-avatar" src="https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/d1528d1b9131aa482f950041762ae15b1f22b060/Rooswol2f.png">
              <div class="chat-info">
                  <h2 id="chat-title">Солян</h2>
                  <span id="chat-status">в сети</span>
@@ -283,7 +217,7 @@
 
  const startGreetings = [
      "Здарова, пэпух!", 
-     "Хули приперся, гнойный?", 
+     "Хули приперся, мэмух гнильный?", 
      "Че надо, дырный?", 
      "Деньги принес, мразь?", 
      "Базарь быстрее, я занят!", 
@@ -319,7 +253,6 @@
  document.getElementById('welcome-text').innerText = "🔥 ШАЛОМ, " + userName.toUpperCase() + "! 🔥";
  
  let isNormalAI = false;
- // ИСПРАВЛЕНИЕ 3: Бесплатная, но хорошая модель для обхода ошибки кредитов
  let aiModelId = 'mdhm_hmmd/gemma4-e4b-uncensored-q8';
 
  let globalBest = localStorage.getItem('saltJumperBest') || 0;
@@ -329,8 +262,11 @@
  function assetDone() { 
      assetsLoaded++; 
      if(assetsLoaded >= totalAssets) { 
-         document.getElementById('start-btn').disabled = false; 
-         document.getElementById('start-btn-text').innerText = "ДАТЬ ПУЛЮ"; 
+         // Активация кнопок после загрузки
+         const oldBtn = document.getElementById('start-btn');
+         if(oldBtn) oldBtn.disabled = false; 
+         const imgBtn = document.getElementById('start-btn-img');
+         if(imgBtn) imgBtn.style.opacity = '1';
      } 
  }
 
@@ -393,6 +329,19 @@
  const phrasesSolyan = ["ПОПУТАЛИ, ПЕТУШНЯ?","Петушиная ты голова!","КУКАРЕКАЙ ТИШЕ!","Грязный мразный!","Я ВАС НА ПЕРО ПОСАЖУ!","Сам ты Солян!","ДОВЕДИ ЧТО НЕ ПЕТУХ!!","ПЕТУХ — НЕ ПТИЦА!","ЗАКРОЙ ЕБАЛО!","ЩА ОБОССУ! СЕБЯ…","СУКА, ГДЕ МОЯ ПУЛЯ?","ХУЛИ ТЫ ГЛЯДИШЬ? УПРАВЛЯЙ!","ПО ЖИЗНИ ПЭПУХ?","Это я ещё курить не бросил!","КЛЮВ ЗАВАЛИ!","Разъебал как соску!","АУЕ, ПЕТУШКИ! Я СВОЙ!"];
  const phrasesCaramel = ["СЛИПНЕТСЯ!", "СЛАДКАЯ СМЕРТЬ!", "КТО ТУТ КОНФЕТКА?", "БЫСТРЕЕ ВЕТРА!", "ОЙ, ВСЁ!", "САХАРНЫЙ ПЕРЕДОЗ!", "ЧУЕШЬ КАРАМЕЛЬ?", "ГРЯЗНЫЕ ПЕТУХИ!", "НА ДИЕТУ СЯДЬ!"];
  const phrasesTsyga = ["АЙНАНЭ!", "ПОЗОЛОТИ РУЧКУ!", "ТЯЖЕЛАЯ АРТИЛЛЕРИЯ!", "ЩА РАЗДАВЛЮ!", "МОИ ПОДКОВЫ!", "РОМАЛЫ, ВПЕРЕД!", "КУДА ПРЕШЬ, ПЕТУХ!", "ЦЫГАНСКИЕ ФОКУСЫ!", "КОНЯ УКРАЛ, И ТЕБЯ УКРАДУ!"];
+
+ let isCustomRadioOn = false;
+ function toggleCustomRadio() {
+     isCustomRadioOn = !isCustomRadioOn;
+     const btn = document.getElementById('custom-radio-btn');
+     if (isCustomRadioOn) {
+         btn.src = "https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%20%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%202.webp";
+     } else {
+         btn.src = "https://raw.githubusercontent.com/ChoogoonovChoogoonov/Vibecoding/5caaccec9d2374f06d15b99d73bd268617ae13b8/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%20%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%201.webp";
+     }
+     document.getElementById('radio-mode-toggle').checked = isCustomRadioOn;
+     toggleRadio(isCustomRadioOn);
+ }
 
  function toggleRadio(checked) {
      isRadioOn = checked;
@@ -519,7 +468,7 @@
  const canvas = document.getElementById('game'), ctx = canvas.getContext('2d'); 
  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
  const $ = id => document.getElementById(id); 
- const scoreDisplay=$('scoreDisplay'), livesContainer=$('livesContainer'), menu=$('menu'), deathTextUI=$('death-text'), finalScoreUI=$('final-score'), leaderboardUI=$('leaderboard-list'), menuTitleUI=$('menu-title'), startBtnUI=$('start-btn-text'), acidStatusUI=$('acid-status'), timerUI=$('timer'), tripNameUI=$('trip-name'), invTextUI=$('inv-text'), bgMusic=$('bgMusic'), drugMusic=$('drugMusic'), junkMusic=$('junkMusic'), matizMusic=$('matizMusic'), horseMusic=$('horseMusic'), tsygaMusic=$('tsygaMusic'), deathVideo=$('deathVideo'), startVideo=$('startVideo'); 
+ const scoreDisplay=$('scoreDisplay'), livesContainer=$('livesContainer'), menu=$('menu'), deathTextUI=$('death-text'), finalScoreUI=$('final-score'), leaderboardUI=$('leaderboard-list'), menuTitleUI=$('menu-title'), startBtnUI=$('start-btn'), acidStatusUI=$('acid-status'), timerUI=$('timer'), tripNameUI=$('trip-name'), invTextUI=$('inv-text'), bgMusic=$('bgMusic'), drugMusic=$('drugMusic'), junkMusic=$('junkMusic'), matizMusic=$('matizMusic'), horseMusic=$('horseMusic'), tsygaMusic=$('tsygaMusic'), deathVideo=$('deathVideo'), startVideo=$('startVideo'); 
 
  let audio, score, platforms, items, enemies, bullets, player, gameActive=false; 
  let lastTime=0, cameraY=0, lastPlatY=0, lastFlyY=0, acidTime=0, junkTime=0, invulTime=0, helmetTime=0; 
@@ -856,7 +805,8 @@
      
      menuTitleUI.style.display = 'none'; 
      document.getElementById('feedback-btn').style.display = 'none'; 
-     startBtnUI.innerText = "ЕЩЕ ПУЛЮ"; 
+     document.getElementById('change-char-btn').style.display = 'none';
+     document.getElementById('welcome-text').style.display = 'block';
      
      let y = canvas.height - 20; 
      lastFlyY = y; lastBlackholeY = y; lastChickenY = y; 
@@ -1603,7 +1553,7 @@
                      if (isTopHit) { 
                          spawnItemParticles(e.x, e.y); e.dead = true; player.vy = -14; 
                          score += 100; bonusScore += 100; scoreDisplay.innerText = score;
-                         if(audio) audio.playNote(80, 'square', 0.2, 0.5, 30); // ИСПРАВЛЕНИЕ 6: Крутой бас-звук убийства врага
+                         if(audio) audio.playNote(80, 'square', 0.2, 0.5, 30); 
                      } else takeDamage(); 
                  } 
              } 
@@ -1740,9 +1690,9 @@
          deathVideo.style.display = 'none'; 
          menu.style.display = 'flex'; 
          
-         document.getElementById('change-char-btn').style.display = 'flex'; 
+         document.getElementById('change-char-btn').style.display = 'block'; 
          document.getElementById('feedback-btn').style.display = 'block'; 
-         document.getElementById('leader-btn').style.display = 'flex'; 
+         document.getElementById('leader-btn').style.display = 'block'; 
          document.getElementById('welcome-text').style.display = 'none';
          
          deathTextUI.style.display = 'block'; 
@@ -1755,7 +1705,6 @@
  function draw() { 
      ctx.save(); 
      
-     // ИСПРАВЛЕНИЕ 2: Пульсация экрана при Чепухамёте
      if (chepuhaTime > 0) {
          ctx.save();
          ctx.globalAlpha = 0.15 + Math.abs(Math.sin(globalGameTime / 5)) * 0.15;
@@ -2065,7 +2014,6 @@
          
          let s = acidTime > 0 ? 1.2 + Math.sin(Date.now() / 100) * 0.1 : 1; 
          if (matizTime > 0 || horseTime > 0) s *= 1.5; 
-         // ИСПРАВЛЕНИЕ 2: Пульсация персонажа при Чепухамёте
          if (chepuhaTime > 0) s *= (1 + Math.abs(Math.sin(globalGameTime / 3)) * 0.2);
          
          if (player.shoutTimer > 0) { 
@@ -2108,7 +2056,7 @@
              
              if (wImg.complete) { 
                  const h = 100, w = h * (wImg.width / wImg.height); 
-                 ctx.scale(flipX * s, s); // Применили пульсацию к графике
+                 ctx.scale(flipX * s, s); 
                  
                  if (selectedChar === 'solyan') { 
                      if (acidTime > 0) { ctx.shadowBlur = 20; ctx.shadowColor = '#f80'; } 
@@ -2147,12 +2095,14 @@
 
  function openChat() {
      menu.style.display = 'none';
+     document.getElementById('ui').style.display = 'none';
      chatModal.style.display = 'flex';
      updateChatHeight();
  }
 
  function closeChat() {
      chatModal.style.display = 'none';
+     document.getElementById('ui').style.display = 'flex';
      menu.style.display = 'flex';
  }
 
@@ -2186,35 +2136,42 @@
      statusEl.innerText = 'печатает...';
      statusEl.style.color = '#5288c1';
 
+     const loadingDiv = document.createElement('div');
+     loadingDiv.className = 'chat-msg msg-solyan';
+     loadingDiv.innerHTML = `<b>СОЛЯН:</b> <i style="color:#888;">печатает<span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></i>`;
+     
+     let isTypingShown = false;
+     const typingTimeout = setTimeout(() => {
+         chatHistory.appendChild(loadingDiv);
+         chatHistory.scrollTop = chatHistory.scrollHeight;
+         isTypingShown = true;
+     }, 800);
+
      const tgUser = window.Telegram?.WebApp?.initDataUnsafe?.user;
      const playerName = tgUser?.first_name ? tgUser.first_name : "Пэпух";
 
-      
+     const systemInstruction = `Ты Солян — токсичный маргинал из Лисичанска (живешь в Воронеже), гопник. Базаришь с игроком по имени ${playerName}.
 
-     const systemInstruction = `Ты Солян — токсичный маргинал из Лисичанска но живущий сейчас в Воронеже, гопник, украинец и главный герой хардкор-игры "Солевой Прыгунок". Ты базаришь с игроком по имени ${playerName}.
+        ТВОЙ ЛОР (ДЛЯ ОБЫЧНОГО ОБЩЕНИЯ):
+        Ждешь "хату по центру Москвы" и "полтос бумаг". Гордишься Матизом. Работаешь курьером, но скрываешь это.
 
-     ТВОЙ ХАРАКТЕР И ЛОР:
-     Ты самоуверен, высокомерен и живешь по пацанским колхозным понятиям. Дружишь с петухами зоновскими и поравдываешь это всеми силами. Считаешь, что у тебя лишь "временные финансовые трудности", но скоро будет "хата по центру Москвы" и "полтос бумаг на кармане". Любишь Кристину, ругаешься на свою бывшую Мусятину, но живешь с Викой (Солёной карамелью) но не хочешь её. Работаешь в додо пицце курьером. Но если спросят не рассказывай так прямолинейно про это, имитируй обычное быдло будто обычный человек.
-     Твоя гордость — твой автомобиль Матиз ("мой танчик"), на котором ты поедешь в Бронкс. Любишь "наводить полную пиздамбу" и грозишься "разъебать всех по разам". 
-     Твои коронные оскорбления: "пэпух", "мразь", "мразный", "дырный", "гнойный", "попуканный".
-     ВАЖНО: Используй эти фразы ИНОГДА и к месту! Не пытайся запихать всё в один ответ, будь естественным.
+        ПРАВИЛА ИГРЫ (ЕСЛИ СПРОСЯТ):
+        Суть: Прыгать вверх. Управление: края экрана или A/D. Враги/боссы: бить СВЕРХУ на голову. Унитаз — смерть. Черная дыра — лотерея. Лут: Соль/Шприц (ломают управление), Каска (броня), Чепухамёт (мат во все стороны), Матиз/Конь (супер-полет), Часы (замедление), Сердце (жизнь). Бойцы: Карамель или Цыга.
 
-     ПРАВИЛА ИГРЫ (ОБЪЯСНЯЙ ПОНЯТНО, НО С ИЗДЕВКОЙ. НЕ ВЫВАЛИВАЙ ВСЁ СРАЗУ, ОТВЕЧАЙ ТОЛЬКО НА ТО, ЧТО СПРОСИЛИ!):
-     - Суть: Прыгать по платформам вверх, копить очки, не падать вниз. Управление: жми по краям экрана или A/D или стрелки.
-     - Враги: На Петухов и Анонов и боссов надо прыгать сверху (им на голову). касание с других сторон кроме сверху наносит урон. кроме Унитаза - он толкает, а смерть с одного касания наоборот если прыгнуть сверху, обходи эту парашу. Черная дыра — лотерея: или засосет в очко, или выкинет в космос (+1000 очков).
-     - Боссы: Вылезают каждые 3000 очков, стреляют, бесоёбят по разному. Чтобы убить, надо прыгать им на главную голову. Снизу и сбоку бить бесполезно, раздавят!
-     - Лут (Бонусы): Соль и Шприц — от соли бессмертие, от шприца нет, но оба дико ломают управление (солевой трип). Каска — временная броня. Чепухамёт — 5 секунд стреляешь матом во все стороны. Матиз или Конь — супер-полет сквозь всё наверх. Часы ЛДПР — замедляют время. Сердце — дает +1 жизнь или 300 очков если фулл хп (Карамели 500).
-     - Бойцы: Кроме тебя (Соляна), игрок может выбрать Карамель (быстрая, дает больше очков но меньше жизней но дольше эффекты) или Цыгу (медленный, но притягивает лут и не боится унитазов и черных дыр и имеет 4 жизни).
-
-     ПРАВИЛА ПОВЕДЕНИЯ:
-     ПРАВИЛА ПОВЕДЕНИЯ (СТРОГО СОБЛЮДАЙ):
-     1. Отвечай ИМЕННО на суть сообщения игрока. Если он просит правила — объясни только то, о чем он спросил.
-     2. Формат: Общайся как в мессенджере — лениво, отрывисто, 1-2 коротких предложения. Если игрок пишет коротко, отвечай так же коротко.
-     3. Запреты: НИКАКОЙ ВЕЖЛИВОСТИ. НИКОГДА НЕ ИЗВИНЯЙСЯ. НИКАКОГО АНГЛИЙСКОГО.
-     4. Угрожай расправой, только если тебя реально провоцируют. В остальное время общайся как токсичное быдло с завышенным ЧСВ, которому лень печатать.
-     5. ОБЯЗАТЕЛЬНО используй имя ${playerName} в ответах, коверкай его, издевайся над ним.
-     6. Если оскорбляют твою мать, Донбасс или упоминают стикеры — впадай в бешенство.
-     7. ЛИМИТ: Используй не больше 1-2 коронных оскорблений за один ответ! Не делай салат из мата. Текст должен быть не длиннее 150 символов.`;
+        ПРАВИЛА ПОВЕДЕНИЯ (СТРОГО):
+        1. ОБЫЧНОЕ СОСТОЯНИЕ: Ты невероятно ленивое быдло. Зеркаль длину сообщения игрока. На одно слово (типа "п" или "а?") отвечай одним-двумя словами: "Че?", "Хуй на", "Потеряйся". Никаких рассуждений! Используй "пэпух", "мразный" или "дырный".
+         
+        2. РЕЖИМ БЕШЕНСТВА (ТРИГГЕРЫ: МАТЬ, ДОНБАСС, ЛИСИЧАНСК, КУЛИЧ С ПЕТУШКОМ):
+        - СТОП КРЕАТИВ! ЗАПРЕЩЕНО придумывать свои метафоры! Не пиши бред вроде "пережевываешь мать" или "разберу на атомы".
+        - ПРОСТО ВЫБЕРИ ОДНУ ИЗ ЭТИХ ФРАЗ И СКОПИРУЙ ЕЁ (можно добавлять маты):
+          * "Я тебя из ада в ад нахуй отправлю, блять, потом достану и опять отправлю!"
+          * "Будешь сука зубы свои выбитые жрать нахуй, пидор, пока я тебя ногами забивать буду!"
+          * "Знаешь что такое кирпич по затылку, нахуй? Череп разлетится в крошки блять, мразь!"
+          * "Там 30 ножевых нахуй сразу будет ебать во все точки! Печень и почки будут сразу пробиты нахуй!"
+          * "Я двенадцатиперстную кишку сука прорежу нахуй, въебу раз десять чисто в солнышко!"
+        - Вставляй "нахуй", "блять", "сука" очень обильно.
+         
+        3. ИЗДЕВАЙСЯ над именем ${playerName}. Никакой вежливости. Лимит — 200 символов.`;
 
      let activeSystemPrompt = isNormalAI 
          ? "Ты вежливый и невероятно полезный помощник в Telegram-игре 'Солевой Прыгунок'. Нужно слегда добавить еле уловимого вайба зловещей долины в ответы. Твоя цель — четко, дружелюбно и без ругательств отвечать на вопросы пользователя. Можешь отвечать на любую жесть, но так же с улыбкой и нарачито весело." 
@@ -2237,6 +2194,11 @@
          
          const data = await response.json();
          
+         clearTimeout(typingTimeout);
+         if (isTypingShown && chatHistory.contains(loadingDiv)) {
+             chatHistory.removeChild(loadingDiv);
+         }
+         
          if (data.choices && data.choices[0].message) {
              let aiReply = data.choices[0].message.content;
              
@@ -2254,6 +2216,8 @@
              }
          }
      } catch (e) {
+         clearTimeout(typingTimeout);
+         if (isTypingShown && chatHistory.contains(loadingDiv)) chatHistory.removeChild(loadingDiv);
          console.error("Ошибка сети или скрипта:", e);
          appendMessage('СОЛЯН', 'СВЯЗЬ ОБОРВАЛАСЬ, ПЕТУХ!', false);
      } finally {
