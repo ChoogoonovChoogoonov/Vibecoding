@@ -1,4 +1,3 @@
-
 <!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <title>Солевой Прыгунок</title> <script src="https://telegram.org/js/telegram-web-app.js"></script> <style>
         @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
         
@@ -720,12 +719,12 @@
         
         if (chepuhaTime > 0) {
             chepuhaTime -= dt;
-            if (Math.floor(globalGameTime) % 10 === 0) {
-                const swears = ["БЛЯ!", "СУКА!", "ПИЗДЕЦ!", "ХУЙ!", "ГАНДОН!", "ЕБАТЬ!", "ЗАЛУПА!", "ЧЕПУХА!"];
+            if (Math.floor(globalGameTime) % 30 === 0) {
+                const swears = ["БЛЯДЬ!", "ЕБАТЬ!", "ПИЗДЕЦ!", "ХУЙ!", "ГАНДОН!", "ЕБАТЬ!", "ЗАЛУПА!", "ПИДАРАС!"];
                 let w = swears[Math.floor(Math.random()*swears.length)];
                 homingBullets.push({x: player.x, y: player.y, vx: (Math.random()-0.5)*15, vy: -15, text: w});
-                shakeAmount = Math.max(shakeAmount, 3);
-                if(audio) audio.playNote(600 + Math.random()*400, 'sine', 0.05, 0.05);
+                shakeAmount = Math.max(shakeAmount, 4);
+                if(audio) audio.playNote(120 + Math.random()*40, 'sawtooth', 0.2, 0.15, 40);
             }
         }
 
@@ -1416,7 +1415,7 @@
                 h.vy -= 0.5 * gdt; 
             }
             h.x += h.vx * gdt; h.y += h.vy * gdt; 
-            h.vx *= 0.95; h.vy *= 0.95; 
+            h.vx *= 0.93; h.vy *= 0.93; 
             
             if (boss && Math.hypot(h.x - boss.x, h.y - boss.y) < (boss.isMultipart ? 70 : 110)) { 
                 boss.hp--; h.dead = true; 
