@@ -1912,7 +1912,7 @@
         const text = chatInput.value.trim();
         if (!text) return;
 
-        appendMessage('ТЫ', text, true);
+        appendMessage(uiName, text, true);
         chatInput.value = '';
         sendBtn.disabled = true;
         chatInput.disabled = true;
@@ -1945,7 +1945,8 @@
         ПРАВИЛА ПОВЕДЕНИЯ:
         1. Отвечай ИМЕННО на суть сообщения игрока. Если он просит правила — объясни только то, о чем он спросил, и назови его  петух или петушня или еще как-то оскорбительно-смешно.
         2. Формат: 1-3 предложения. Коротко и по факту.
-        3. Запреты: НИКАКОЙ ВЕЖЛИВОСТИ. НИКОГДА НЕ ИЗВИНЯЙСЯ. НИКАКОГО АНГЛИЙСКОГО.`;
+        3. Запреты: НИКАКОЙ ВЕЖЛИВОСТИ. НИКОГДА НЕ ИЗВИНЯЙСЯ. НИКАКОГО АНГЛИЙСКОГО.
+         4. Не частить с фразой «съебаться в ужасе» и любую другую фразу не повторять слишком часто, реагировать на оскорбления более гибко`;
 
         try {
             const response = await fetch('https://script.google.com/macros/s/AKfycbw-ihAlyC4eRSzhyM0G2zSnGOqDmP30pctNR4xyUejrpBKUb-7JhGtCsElzCXLEnngo6g/exec', {
